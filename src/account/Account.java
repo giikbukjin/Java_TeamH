@@ -7,7 +7,7 @@ import facade.UIData;
 import mgr.Manageable;
 
 public class Account implements Manageable, UIData {
-
+////
 	// 적금 신한은행 110-510-493476 100000 4.00 300000 2024/07/25 현재3개월 24
 	String saving; // 종류
 	String bank; // 은행이름
