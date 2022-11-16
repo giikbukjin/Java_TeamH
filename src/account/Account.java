@@ -17,7 +17,7 @@ public class Account implements Manageable, UIData {
 	int asset; // 자산
 	String expire; // 만료일
 	String present; // 현재 개월 수
-	int nMonth; // 예금/적금 든 개월 수
+	int nMonth; // 예금/적금 든 개월 수  
 	
 
 	public void set(Object[] row) {
