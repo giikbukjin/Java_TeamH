@@ -23,27 +23,19 @@ public class View4 extends JPanel {
 	 */
 
 	public View4() {
-
-		setLayout(new BorderLayout(0, 0));
-
-		 
-
+		/*setLayout(new BorderLayout(0, 0));
 		JButton btnNewButton = new JButton("New button");
-
 		btnNewButton.setIcon(null);
-
 		add(btnNewButton, BorderLayout.CENTER);
 
-		 
-
 		JTextArea textArea = new JTextArea();
-
 		textArea.setText(null);
-
 		textArea.setBackground(Color.PINK);
+		add(textArea, BorderLayout.SOUTH);*/
 
-		add(textArea, BorderLayout.SOUTH);
-
+		JButton button1 = new JButton("추천");
+		button1.setBounds(320, 200, 100, 60);
+		button1.setIcon(null);
+		add(button1);
 	}
-
 }

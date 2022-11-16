@@ -14,7 +14,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-
 public class View2 extends JPanel implements ActionListener {
 
 	/**
@@ -24,7 +23,6 @@ public class View2 extends JPanel implements ActionListener {
 	 */
 
 	public View2() {
-
 		setLayout(null);
 
 		JButton button1 = new JButton("검색");
@@ -43,19 +41,13 @@ public class View2 extends JPanel implements ActionListener {
 		add(button3);
 
 		JTextField textField = new JTextField();
-
 		textField.setText(null);
-
 		textField.setBackground(Color.WHITE);
-		
 		textField.setBounds(10, 340, 240, 40);
-
 		add(textField);
-
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 	}
 }
