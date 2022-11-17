@@ -19,9 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-
-public class View1 extends JPanel implements ActionListener{
-	
+public class View1 extends JPanel implements ActionListener {
 
 	/**
 	 * 
@@ -30,21 +28,13 @@ public class View1 extends JPanel implements ActionListener{
 	 */
 
 	public View1() {
-		
 		setLayout(new BorderLayout(0,0));
-
 		JButton button = new JButton("");
-
 		button.setIcon(new ImageIcon("C:\\shinhan.jpg"));
 		add(button, BorderLayout.CENTER);
-
-		
-		
-		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 	}
 }

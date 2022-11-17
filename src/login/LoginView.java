@@ -1,5 +1,7 @@
 package login;
 
+import swing.MainFrame;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
  
@@ -12,10 +14,10 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
  
 public class LoginView extends JFrame{
-   
+
 	private static final long serialVersionUID = 1L;
 	private MainProcess main;
-    private JButton btnLogin;
+    JButton btnLogin;
     private JButton btnInit;
     private JPasswordField passText;
     private JTextField userText;
@@ -36,8 +38,7 @@ public class LoginView extends JFrame{
         // panel
         JPanel panel = new JPanel();
         placeLoginPanel(panel);
-       
-       
+
         // add
         add(panel);
        
@@ -91,16 +92,17 @@ public class LoginView extends JFrame{
         });
     }
    
-    public void isLoginCheck(){
+    public void isLoginCheck() {
         if(userText.getText().equals("test") && new String(passText.getPassword()).equals("1234")) {
             JOptionPane.showMessageDialog(null, "로그인 성공");
             bLoginCheck = true;
            
             // 로그인 성공이라면 매니저 창 띄우기
-            if(isLogin()){
+            if(isLogin()) {
                 main.showFrameTest(); // 메인 창 메소드를 이용해 창 띄우기
-            }                  
-        }else{
+            }
+        }
+        else {
             JOptionPane.showMessageDialog(null, "로그인 실패");
         }
     }
