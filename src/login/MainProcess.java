@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class MainProcess{
     LoginView loginView;
+    MainFrame mainFrm;
    
     public static void main(String[] args) {
         // 메인클래스 실행
@@ -17,14 +18,7 @@ public class MainProcess{
    
     // 메인프레임 창
     public void showFrameTest() {
-        loginView.btnLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //loginView.dispose(); // 로그인 창 닫기
-                loginView.setVisible(false);
-                MainFrame frame = new MainFrame();
-                frame.setVisible(true);
-            }
-        });
+        loginView.dispose();//로그인창닫기
+        this.mainFrm = new MainFrame();//테스트프레임 오픈
     }
 }
