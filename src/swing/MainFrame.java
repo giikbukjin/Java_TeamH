@@ -15,7 +15,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class MainFrame extends JFrame implements ActionListener {
-	private JPanel contentPane;
+    private static final long serialVersionUID = 1L;
+    private JPanel contentPane;
 	private JButton b1;
 	private JButton b2;
 	private JButton b3;
@@ -33,19 +34,6 @@ public class MainFrame extends JFrame implements ActionListener {
 	 * Launch the application.
 	 * 
 	 */
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainFrame frame = new MainFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 /**
 
@@ -92,6 +80,8 @@ public MainFrame() {
      b2.addActionListener(this);
      b3.addActionListener(this);
      b4.addActionListener(this);
+
+     setVisible(true);
 }
 
 	@Override

@@ -30,7 +30,7 @@ public class View1 extends JPanel implements ActionListener {
 	public View1() {
 		setLayout(new BorderLayout(0,0));
 		JButton button = new JButton("");
-		button.setIcon(new ImageIcon("C:\\shinhan.jpg"));
+		button.setIcon(new ImageIcon("shinhan.jpg"));
 		add(button, BorderLayout.CENTER);
 	}
 

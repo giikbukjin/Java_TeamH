@@ -95,7 +95,7 @@ public class LoginView extends JFrame{
     public void isLoginCheck() {
         if(userText.getText().equals("test") && new String(passText.getPassword()).equals("1234")) {
             JOptionPane.showMessageDialog(null, "로그인 성공");
-            bLoginCheck = true;
+            bLoginCheck = true; //판단
            
             // 로그인 성공이라면 매니저 창 띄우기
             if(isLogin()) {
