@@ -46,5 +46,4 @@ public class TableSelectionDemo extends JPanel {
 		});
 		add(topPane, BorderLayout.PAGE_START);
 	}
-
 }
