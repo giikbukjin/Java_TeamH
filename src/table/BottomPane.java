@@ -48,26 +48,26 @@ class BottomPane extends JPanel implements ActionListener {
 		return editTexts;
 	}
 	// 현재 선택된 행의 데이터를 편집창에 하나씩 넣어줌
-    void moveSelectedToEdits(String[] rowTexts) {
-    	for (int i = 0; i < rowTexts.length; i++) {
-    		edits[i].setText(rowTexts[i]);
-    	}
+	void moveSelectedToEdits(String[] rowTexts) {
+		for (int i = 0; i < rowTexts.length; i++) {
+			edits[i].setText(rowTexts[i]);
+		}
 	}
 	public void actionPerformed(ActionEvent e) {
 		String[] editTexts = getEditTexts();
 		clearEdits();
 		TableController tableController = TableSelectionDemo.tableController;
 		switch (e.getActionCommand()) {
-		case "추가":
-			tableController.addRow(editTexts);
-			break;
-		case "Done":
-    		tableController.updateRow(editTexts);
-    		break;
-		case "삭제":
-    		tableController.removeRow();
-    		break;
-    	default: break;
+			case "추가":
+				tableController.addRow(editTexts);
+				break;
+			case "Done":
+				tableController.updateRow(editTexts);
+				break;
+			case "삭제":
+				tableController.removeRow();
+				break;
+			default: break;
 		}
 		tableController.table.clearSelection();
 	}
