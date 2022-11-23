@@ -1,6 +1,7 @@
 package table;
 
 import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 import facade.DataEngineInterface;
 import account.AccountMgr;
@@ -8,8 +9,8 @@ import account.AccountMgr;
 public class GUIMain {
     static DataEngineInterface engine;
     public static void startGUI(DataEngineInterface en) {
-    	engine = en;
-       //Schedule a job for the event-dispatching thread:
+        engine = en;
+        //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -24,16 +25,21 @@ public class GUIMain {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-    	JFrame mainFrame = new JFrame("TableSelectionDemo");
-        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MyFrame mainFrame = new MyFrame("자산 관리 시스템");
+        //JTabbedPane tab = new JTabbedPane();
+        //JFrame mainFrame = new JFrame("TableSelectionDemo");
+        //mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.
-        TableSelectionDemo newContentPane = new TableSelectionDemo();
-        newContentPane.addComponentsToPane();
-        mainFrame.getContentPane().add(newContentPane);
+        //TableSelectionDemo newContentPane = new TableSelectionDemo();
+        //newContentPane.addComponentsToPane();
+        //mainFrame.getContentPane().add(newContentPane);
 
         //Display the window.
         mainFrame.pack();
         mainFrame.setVisible(true);
+        //tab.addTab("자산", mainFrame);
     }
+
+
 }
