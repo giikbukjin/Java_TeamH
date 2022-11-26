@@ -13,10 +13,6 @@ import javax.swing.border.LineBorder;
 import table.GUIMain;
 
 public class RcmdItemModel extends JPanel {
-
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     public RcmdItemModel(RcmdItem ri) {
@@ -24,7 +20,6 @@ public class RcmdItemModel extends JPanel {
     }
 
     public void createModel(RcmdItem ri) {
-
         // contentPane.add(model);
         GridLayout layout = new GridLayout(4, 2, 10, 10);
         setLayout(layout);
@@ -41,16 +36,14 @@ public class RcmdItemModel extends JPanel {
         add(new JLabel("" + ri.limit));
         add(new JLabel(ri.fc));
         this.setBorder(new LineBorder(Color.blue));
-
     }
 
     public void matchImage(RcmdItem ri, JLabel a) {
         if ((ri.bank).equals("우리종합금융")) {
-            ImageIcon ii = new ImageIcon("C:\\Users\\shinhan.jpg");
+            ImageIcon ii = new ImageIcon("shinhan.jpg");
             ii = imageSetSize(ii, 100, 100);
             a.setIcon(ii);
         }
-
     }
 
     ImageIcon imageSetSize(ImageIcon icon, int i, int j) { // image Size Setting
@@ -59,5 +52,4 @@ public class RcmdItemModel extends JPanel {
         ImageIcon xyimg = new ImageIcon(yimg);
         return xyimg;
     }
-
 }

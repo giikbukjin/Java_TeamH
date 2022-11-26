@@ -16,7 +16,6 @@ public class RcmdItem implements Manageable{
 
     @Override
     public void read(Scanner scan) {
-        // TODO Auto-generated method stub
         saving = scan.next();
         bank = scan.next();
         ItemName = scan.next();
@@ -27,16 +26,11 @@ public class RcmdItem implements Manageable{
     }
     @Override
     public void print() {
-        // TODO Auto-generated method stub
         System.out.printf("[%s] %s %s %s %d %d %s \n"
                 , saving, bank, ItemName, rate, month, limit, fc);
-
     }
     @Override
     public boolean matches(String kwd) {
-        // TODO Auto-generated method stub
         return false;
     }
-
-
 }
