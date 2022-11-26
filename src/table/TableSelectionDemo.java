@@ -27,14 +27,14 @@ public class TableSelectionDemo extends JPanel {
 	public TableSelectionDemo() {
 		super(new BorderLayout());
 	}
-
+	
 	void showRecommend() {
 		RecommendDialog rcmd = new RecommendDialog();
 		rcmd.setup();
 		rcmd.setVisible(true);
 	}
 
-	void addComponentsToPane() {
+	public void addComponentsToPane() {
 		tableController = new TableController();
 		tableController.init();
 		JScrollPane center = new JScrollPane(tableController.table);
