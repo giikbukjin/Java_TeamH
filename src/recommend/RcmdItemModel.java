@@ -40,7 +40,7 @@ public class RcmdItemModel extends JPanel {
 
     public void matchImage(RcmdItem ri, JLabel a) {
         if ((ri.bank).equals("우리종합금융")) {
-            ImageIcon ii = new ImageIcon("shinhan.jpg");
+            ImageIcon ii = new ImageIcon("./img/shinhan.PNG");
             ii = imageSetSize(ii, 100, 100);
             a.setIcon(ii);
         }
