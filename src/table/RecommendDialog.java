@@ -1,7 +1,6 @@
 package table;
 
 import javax.swing.JPanel;
-
 import recommend.RcmdItemScroll;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -20,7 +19,7 @@ public class RecommendDialog extends javax.swing.JDialog {
         lpane.add(rimContentPane.scroll);
         pane.add(lpane, BorderLayout.CENTER);
 
-        this.setMinimumSize(new Dimension(800, 500));  // 대화상자 크기 설정
+        this.setMinimumSize(new Dimension(800, 500)); // 대화상자 크기 설정
         setContentPane(pane);
     }
 }

@@ -1,44 +1,13 @@
 package table;
 
 import javax.swing.JPanel;
-
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
-
-import account.Account;
-import account.AccountMgr;
-import mgr.Manageable;
-import recommend.RcmdItemMgr;
-import recommend.RcmdItemScroll;
-import table.TableSelectionDemo;
-
-import java.awt.BorderLayout;
-
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 
 public class Recommend extends JPanel{
-
-    /**
-     *
-     * Create the panel.
-     * @return
-     *
-     */
 
     public Recommend() {
         RecommendView();
@@ -47,11 +16,11 @@ public class Recommend extends JPanel{
     void RecommendView() {
         TableSelectionDemo tableDemo = new TableSelectionDemo();
         setLayout(null);
-        JLabel userLabel = new JLabel("보유현금");
+        JLabel userLabel = new JLabel("보유 현금");
         userLabel.setBounds(80, 190, 80, 25);
         add(userLabel);
 
-        JLabel passLabel = new JLabel("저축가능액");
+        JLabel passLabel = new JLabel("저축 가능액");
         passLabel.setBounds(70, 240, 80, 25);
         add(passLabel);
         

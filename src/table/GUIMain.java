@@ -1,10 +1,6 @@
 package table;
 
-import javax.swing.JFrame;
-import javax.swing.JTabbedPane;
-
 import facade.DataEngineInterface;
-import account.AccountMgr;
 
 public class GUIMain {
     static DataEngineInterface engine;
