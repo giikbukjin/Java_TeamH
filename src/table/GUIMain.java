@@ -1,10 +1,12 @@
 package table;
 
+<<<<<<< HEAD
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
+=======
+>>>>>>> 2649020ebc6218d4e7ad46b22c617da7b1a7d47b
 import facade.DataEngineInterface;
-import account.AccountMgr;
 
 public class GUIMain {
     static DataEngineInterface engine;
@@ -40,4 +42,9 @@ public class GUIMain {
         mainFrame.setVisible(true);
         //tab.addTab("자산", mainFrame);
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2649020ebc6218d4e7ad46b22c617da7b1a7d47b
 }
