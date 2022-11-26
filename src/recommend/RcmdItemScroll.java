@@ -8,10 +8,6 @@ public class RcmdItemScroll extends JPanel{
     JPanel rcmdpane = new RcmdItemMgr();
     public JScrollPane scroll = new JScrollPane(rcmdpane);
 
-
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     public RcmdItemScroll() {
@@ -20,8 +16,5 @@ public class RcmdItemScroll extends JPanel{
 
     public void view() {
         scroll.setBounds(0, 0, 160, 160);
-
     }
-
-
 }

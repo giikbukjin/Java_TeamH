@@ -33,8 +33,6 @@ import javax.swing.JOptionPane;
 
 public class Recommend extends JPanel{
 
-
-
     /**
      *
      * Create the panel.
@@ -47,9 +45,6 @@ public class Recommend extends JPanel{
     }
 
     void RecommendView() {
-
-
-
         TableSelectionDemo tableDemo = new TableSelectionDemo();
         setLayout(null);
         JLabel userLabel = new JLabel("보유현금");
@@ -59,6 +54,7 @@ public class Recommend extends JPanel{
         JLabel passLabel = new JLabel("저축가능액");
         passLabel.setBounds(70, 240, 80, 25);
         add(passLabel);
+        
         JTextField kwdTextField1 = new JTextField();
         JTextField kwdTextField2 = new JTextField();
         kwdTextField1.setText(null);
@@ -67,6 +63,7 @@ public class Recommend extends JPanel{
         kwdTextField2.setBounds(160, 230, 240, 40);
         add(kwdTextField1);
         add(kwdTextField2);
+        
         JButton recommend = new JButton("상품 추천");
         recommend.setBounds(430, 190, 90, 70);
         add(recommend);
@@ -74,16 +71,13 @@ public class Recommend extends JPanel{
         recommend.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                if(0<Integer.parseInt(kwdTextField1.getText())
-                        &&Integer.parseInt(kwdTextField1.getText())<1000000) {
+                if (0 < Integer.parseInt(kwdTextField1.getText())
+                        && Integer.parseInt(kwdTextField1.getText()) < 1000000) {
                     if (e.getActionCommand().equals("상품 추천")) {
                         tableDemo.showRecommend();
                     }
                 }
-
             }
         });
-
     }
-
 }

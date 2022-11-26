@@ -13,11 +13,6 @@ import mgr.Manager;
 public class RcmdItemMgr extends JPanel {
     GridBagLayout Gbag = new GridBagLayout();
     int count = 1;
-
-
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     public RcmdItemMgr() {
@@ -50,7 +45,6 @@ public class RcmdItemMgr extends JPanel {
     }
 
     public void create_form(Component cmpt, int x, int y, int w, int h) {
-
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridx = x;
@@ -60,7 +54,5 @@ public class RcmdItemMgr extends JPanel {
         this.Gbag.setConstraints(cmpt, gbc);
         add(cmpt);
         updateUI();
-
     }
-
 }
