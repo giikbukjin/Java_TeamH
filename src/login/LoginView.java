@@ -2,7 +2,7 @@ package login;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
- 
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -10,21 +10,21 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
- 
-public class LoginView extends JFrame{
-   
-	private static final long serialVersionUID = 1L;
-	private MainProcess main;
-    private JButton btnLogin;
+
+public class LoginView extends JFrame {
+
+    private static final long serialVersionUID = 1L;
+    private MainProcess main;
+    JButton btnLogin;
     private JButton btnInit;
     private JPasswordField passText;
     private JTextField userText;
     private boolean bLoginCheck;
-   
+
     public static void main(String[] args) {
         //new LoginView();
     }
- 
+
     public LoginView() {
         // setting
         setTitle("로그인");
@@ -32,43 +32,42 @@ public class LoginView extends JFrame{
         setResizable(false);
         setLocation(800, 450);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-       
+
         // panel
         JPanel panel = new JPanel();
         placeLoginPanel(panel);
-       
-       
+
         // add
         add(panel);
-       
+
         // visible
         setVisible(true);
     }
-   
-    public void placeLoginPanel(JPanel panel){
-        panel.setLayout(null);     
+
+    public void placeLoginPanel(JPanel panel) {
+        panel.setLayout(null);
         JLabel userLabel = new JLabel("아이디");
         userLabel.setBounds(10, 10, 80, 25);
         panel.add(userLabel);
-       
+
         JLabel passLabel = new JLabel("비밀번호");
         passLabel.setBounds(10, 40, 80, 25);
         panel.add(passLabel);
-       
+
         userText = new JTextField(20);
         userText.setBounds(100, 10, 160, 25);
         panel.add(userText);
-       
+
         passText = new JPasswordField(20);
         passText.setBounds(100, 40, 160, 25);
         panel.add(passText);
-        passText.addActionListener(new ActionListener() {          
+        passText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                isLoginCheck();        
+                isLoginCheck();
             }
         });
-       
+
         btnInit = new JButton("초기화");
         btnInit.setBounds(10, 80, 100, 25);
         panel.add(btnInit);
@@ -79,7 +78,7 @@ public class LoginView extends JFrame{
                 passText.setText("");
             }
         });
-       
+
         btnLogin = new JButton("로그인");
         btnLogin.setBounds(160, 80, 100, 25);
         panel.add(btnLogin);
@@ -90,27 +89,29 @@ public class LoginView extends JFrame{
             }
         });
     }
-   
-    public void isLoginCheck(){
-        if(userText.getText().equals("test") && new String(passText.getPassword()).equals("1234")) {
+
+    public void isLoginCheck() {
+        if(userText.getText().equals("user1") && new String(passText.getPassword()).equals("1111")
+                || userText.getText().equals("user2") && new String(passText.getPassword()).equals("2222")) {
             JOptionPane.showMessageDialog(null, "로그인 성공");
-            bLoginCheck = true;
-           
+            bLoginCheck = true; //판단
+
             // 로그인 성공이라면 매니저 창 띄우기
-            if(isLogin()){
+            if(isLogin()) {
                 main.showFrameTest(); // 메인 창 메소드를 이용해 창 띄우기
-            }                  
-        }else{
+            }
+        }
+        else {
             JOptionPane.showMessageDialog(null, "로그인 실패");
         }
     }
-    
+
     // mainProcess와 연동
     public void setMain(MainProcess main) {
         this.main = main;
     }
-   
-    public boolean isLogin() {     
+
+    public boolean isLogin() {
         return bLoginCheck;
     }
 }

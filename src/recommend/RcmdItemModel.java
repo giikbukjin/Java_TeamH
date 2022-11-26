@@ -20,6 +20,7 @@ public class RcmdItemModel extends JPanel {
     }
 
     public void createModel(RcmdItem ri) {
+
         // contentPane.add(model);
         GridLayout layout = new GridLayout(4, 2, 10, 10);
         setLayout(layout);
@@ -36,6 +37,7 @@ public class RcmdItemModel extends JPanel {
         add(new JLabel("" + ri.limit));
         add(new JLabel(ri.fc));
         this.setBorder(new LineBorder(Color.blue));
+
     }
 
     public void matchImage(RcmdItem ri, JLabel a) {
@@ -44,6 +46,7 @@ public class RcmdItemModel extends JPanel {
             ii = imageSetSize(ii, 100, 100);
             a.setIcon(ii);
         }
+
     }
 
     ImageIcon imageSetSize(ImageIcon icon, int i, int j) { // image Size Setting
@@ -52,4 +55,5 @@ public class RcmdItemModel extends JPanel {
         ImageIcon xyimg = new ImageIcon(yimg);
         return xyimg;
     }
+
 }
