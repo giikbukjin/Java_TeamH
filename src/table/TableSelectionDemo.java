@@ -1,13 +1,23 @@
 package table;
 
 import java.awt.BorderLayout;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+import facade.DataEngineInterface;
+import facade.UIData;
+import recommend.RcmdItem;
+import recommend.RcmdItemModel;
+import recommend.RcmdItemScroll;
+import table.RecommendDialog;
 
 public class TableSelectionDemo extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -16,6 +26,12 @@ public class TableSelectionDemo extends JPanel {
 
 	public TableSelectionDemo() {
 		super(new BorderLayout());
+	}
+
+	void showRecommend() {
+		RecommendDialog rcmd = new RecommendDialog();
+		rcmd.setup();
+		rcmd.setVisible(true);
 	}
 
 	void addComponentsToPane() {
@@ -46,5 +62,4 @@ public class TableSelectionDemo extends JPanel {
 		});
 		add(topPane, BorderLayout.PAGE_START);
 	}
-
 }

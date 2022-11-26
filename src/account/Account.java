@@ -9,16 +9,16 @@ import mgr.Manageable;
 public class Account implements Manageable, UIData {
 
 	// 적금 신한은행 110-510-493476 100000 4.00 300000 2024/07/25 현재3개월 24
-	String saving; // 종류
-	String bank; // 은행이름
+	public static String saving; // 종류
+	public String bank; // 은행이름
 	String num; // 계좌번호
 	int month; // 월납입액
-	float rate; // 이율
-	int asset; // 자산
+	public float rate; // 이율
+	public int asset; // 자산
 	String expire; // 만료일
 	String present; // 현재 개월 수
 	int nMonth; // 예금/적금 든 개월 수
-	
+
 
 	public void set(Object[] row) {
 		saving = (String) row[0];
@@ -44,7 +44,7 @@ public class Account implements Manageable, UIData {
 		present = scan.next();
 		nMonth = scan.nextInt();
 	}
-	
+
 	public String[] getUiTexts() {
 		NumberFormat numberFormat = NumberFormat.getInstance();
 		String realAsset = numberFormat.format(asset);
@@ -52,7 +52,7 @@ public class Account implements Manageable, UIData {
 		return new String[] { saving, bank, num, realMonth, "" + rate, realAsset, expire, present, "" + nMonth };
 	}
 
-	
+
 	public void print() {
 		System.out.printf("[%s] %s %s %d %.2f %d %s %d %d\n", saving, bank, num, month, rate, asset, expire, present,
 				nMonth);
