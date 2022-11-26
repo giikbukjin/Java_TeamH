@@ -3,7 +3,7 @@ package login;
 import account.MyMain;
 import table.MyFrame;
 
-public class MainProcess{
+public class MainProcess {
     LoginView loginView;
     MyFrame mainFrm;
 
