@@ -8,7 +8,7 @@ public class MyMain {
 		engine.readAll("./txt/account.txt");
 		GUIMain.startGUI(engine); //GUI 시작 부분
 	}
-	public static void main(String[] args) {
+	public void main(String[] args) {
 		MyMain a = new MyMain();
 		a.mymain();
 	}

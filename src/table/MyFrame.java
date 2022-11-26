@@ -58,7 +58,7 @@ public class MyFrame extends JFrame {
         add(lblNewLabel_1_1);
 
         JPanel homePanel = new JPanel();
-        tabbedPane.addTab("     홈     ", null, null, null);
+        tabbedPane.addTab("     홈     ", null, new Home(), null);
         homePanel.setLayout(null);
 
         JPanel assetPanel = new JPanel();
