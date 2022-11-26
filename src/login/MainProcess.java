@@ -1,20 +1,27 @@
 package login;
 
+import facade.DataEngineInterface;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import account.MyMain;
+import table.MyFrame;
+
 public class MainProcess{
     LoginView loginView;
-    TestFrame testFrm;
-   
+    MyFrame mainFrm;
+
     public static void main(String[] args) {
-       
         // 메인클래스 실행
         MainProcess main = new MainProcess();
-        main.loginView = new LoginView(); // 로그인창 보이기
-        main.loginView.setMain(main); // 로그인창에게 메인 클래스보내기
+        main.loginView = new LoginView(); // 로그인 창 보이기
+        main.loginView.setMain(main); // 로그인 창에게 메인 클래스 보내기
     }
-   
-    // 테스트프레임창
-    public void showFrameTest(){
-        loginView.dispose(); // 로그인창닫기
-        this.testFrm = new TestFrame(); // 테스트프레임 오픈
+
+    // 메인프레임 창
+    public void showFrameTest() {
+        MyMain mm = new MyMain();
+        mm.main(null);
     }
 }
