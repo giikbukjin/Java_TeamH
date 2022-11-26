@@ -26,7 +26,7 @@ public class RcmdItemMgr extends JPanel {
      */
 
     public void view() {
-        mgr.readAll("recommend.txt", new Factory() {
+        mgr.readAll("./txt/recommend.txt", new Factory() {
             public Manageable create() {
                 return new RcmdItem();
             }
@@ -40,7 +40,7 @@ public class RcmdItemMgr extends JPanel {
             RcmdItem r = (RcmdItem) m;
             RcmdItemModel md = new RcmdItemModel(r);
             //add(md);
-            this.create_form(md, 0, count++*30, 30, 10);
+            this.create_form(md, 0, count++ * 30, 30, 10);
         }
     }
 

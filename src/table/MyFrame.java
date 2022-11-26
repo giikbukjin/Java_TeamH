@@ -43,7 +43,7 @@ public class MyFrame extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setBounds(12, 10, 70, 67);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\정진서\\Desktop\\폴더\\도안\\닭.png"));
+		lblNewLabel.setIcon(new ImageIcon("./img/닭.png"));
 		add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("  프로그램 이름");

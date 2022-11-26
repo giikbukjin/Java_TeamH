@@ -31,7 +31,7 @@ public class AccountMgr implements DataEngineInterface {
 
 	@Override
 	public void readAll(String filename) {
-		mgr.readAll("account.txt", new Factory() {
+		mgr.readAll("./txt/account.txt", new Factory() {
 			public Manageable create() {
 				return new Account();
 			}
