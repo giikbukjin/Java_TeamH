@@ -5,6 +5,7 @@ import javax.swing.SwingConstants;
 
 import home.IpchulgumDialog;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,9 +25,10 @@ public class Home extends JPanel{
     	//or YegumDialog info = new YegumDialog();
         setLayout(null);
         
-        JLabel lblNewLabel_3 = new JLabel("New label");
+        JLabel lblNewLabel_3 = new JLabel();
         lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
+        lblNewLabel_3.setBackground(new Color(255, 255, 255));
         lblNewLabel_3.setBounds(35, 29, 95, 95);
         add(lblNewLabel_3);
        

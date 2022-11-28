@@ -1,6 +1,7 @@
 package table;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -43,10 +44,10 @@ public class MyFrame extends JFrame {
         getRootPane().add(panel, BorderLayout.CENTER);
         panel.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("(로고)");
+        JLabel lblNewLabel = new JLabel();
+        lblNewLabel.setIcon(new ImageIcon(""));
         lblNewLabel.setBounds(12, 10, 70, 67);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setIcon(new ImageIcon());
         add(lblNewLabel);
 
         JLabel lblNewLabel_1 = new JLabel("  (프로그램 이름)");
