@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingConstants;
 
+import home.Home;
 import recommend.Recommend;
 
 public class MyFrame extends JFrame {

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Manager {
 	static public Scanner scan = new Scanner(System.in);
-	public ArrayList<Manageable> mList = new ArrayList<>();
+	static public ArrayList<Manageable> mList = new ArrayList<>();
 
 	public void readAll(String filename, Factory fac) { // 파일 읽어오는 함수
 		Scanner filein = null;
