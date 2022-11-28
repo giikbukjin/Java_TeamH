@@ -17,7 +17,7 @@ import facade.UIData;
 import recommend.RcmdItem;
 import recommend.RcmdItemModel;
 import recommend.RcmdItemScroll;
-import table.RecommendDialog;
+import recommend.RecommendDialog;
 
 public class TableSelectionDemo extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -28,7 +28,7 @@ public class TableSelectionDemo extends JPanel {
 		super(new BorderLayout());
 	}
 	
-	void showRecommend() {
+	public void showRecommend() {
 		RecommendDialog rcmd = new RecommendDialog();
 		rcmd.setup();
 		rcmd.setVisible(true);

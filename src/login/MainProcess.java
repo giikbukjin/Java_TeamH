@@ -18,5 +18,6 @@ public class MainProcess {
     public void showFrameTest() {
         MyMain mm = new MyMain();
         mm.main(null);
+        loginView.setVisible(false);
     }
 }
