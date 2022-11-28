@@ -7,7 +7,6 @@ import facade.UIData;
 import mgr.Manageable;
 
 public class Account implements Manageable, UIData {
-////
 	// 적금 신한은행 110-510-493476 100000 4.00 300000 2024/07/25 현재3개월 24
 	public String user;//회원
 	public static String saving; // 종류
@@ -22,9 +21,8 @@ public class Account implements Manageable, UIData {
 	public String present; // 현재 개월 수
 	public int nMonth; // 예금/적금 든 개월 수
 
-
 	public void set(Object[] row) {
-		saving = (String) row[0];
+		/*saving = (String) row[0];
 		bank = (String) row[1];
 		num = (String) row[2];
 		month = Integer.parseInt((String) row[3]);
@@ -32,8 +30,7 @@ public class Account implements Manageable, UIData {
 		asset = Integer.parseInt((String) row[5]);
 		expire = (String) row[6];
 		present = (String) row[7];
-		nMonth = Integer.parseInt((String) row[8]);
-
+		nMonth = Integer.parseInt((String) row[8]);*/
 	}
 
 	public void read(Scanner scan) {
