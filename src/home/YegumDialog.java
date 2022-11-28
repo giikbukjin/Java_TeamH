@@ -10,7 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 public class YegumDialog extends javax.swing.JDialog {
-	 void Yegum() {
+	private static final long serialVersionUID = 1L;
+
+	void Yegum() {
         setTitle("상품 상세보기");
         JPanel pane2 = new JPanel(new BorderLayout());
 

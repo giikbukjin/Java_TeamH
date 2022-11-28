@@ -1,7 +1,6 @@
 package table;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -12,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingConstants;
 
+import home.Home;
 import recommend.Recommend;
 
 public class MyFrame extends JFrame {
@@ -20,14 +20,14 @@ public class MyFrame extends JFrame {
     public MyFrame(String title) {
         createFrame(title);
         JTabbedPane pane = createTabbedPane();
-        getContentPane().add(pane, BorderLayout.CENTER);
+        this.add(pane, BorderLayout.CENTER);
     }
 
     void createFrame(String title) {
         Dimension dim = new Dimension(1024, 600);
         this.setTitle(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        this.setLayout(null);
         this.setVisible(true);
         this.setPreferredSize(dim);
     }
@@ -38,30 +38,29 @@ public class MyFrame extends JFrame {
 
         JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
         tabbedPane.setBounds(12, 87, 986, 466);
-        getContentPane().add(tabbedPane);
+        add(tabbedPane);
 
         JPanel panel = new JPanel();
         getRootPane().add(panel, BorderLayout.CENTER);
         panel.setLayout(null);
 
         JLabel lblNewLabel = new JLabel();
-        lblNewLabel.setText("로고");
         lblNewLabel.setIcon(new ImageIcon("./img/tempLogo.png"));
         lblNewLabel.setBounds(30, 10, 70, 70);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        getContentPane().add(lblNewLabel);
+        add(lblNewLabel);
 
         JLabel lblNewLabel_1 = new JLabel("  (프로그램 이름)");
         lblNewLabel_1.setBounds(111, 10, 235, 67);
         lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_1.setFont(new Font("맑은 고딕", Font.BOLD, 22));
-        getContentPane().add(lblNewLabel_1);
+        add(lblNewLabel_1);
 
         JLabel lblNewLabel_1_1 = new JLabel("안녕하세요, (사용자 이름)님.");
-        lblNewLabel_1_1.setBounds(730, 23, 252, 67);
+        lblNewLabel_1_1.setBounds(746, 23, 252, 67);
         lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_1_1.setFont(new Font("맑은 고딕", Font.BOLD, 18));
-        getContentPane().add(lblNewLabel_1_1);
+        add(lblNewLabel_1_1);
 
         JPanel homePanel = new JPanel();
         tabbedPane.addTab("        홈        ", null, new Home(), null);

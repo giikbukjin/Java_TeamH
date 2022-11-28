@@ -2,36 +2,21 @@ package recommend;
 
 import javax.swing.JPanel;
 
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
-
 import account.Account;
-import account.AccountMgr;
-import mgr.Manageable;
 import table.TableSelectionDemo;
 
-import java.awt.BorderLayout;
-
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import table.MyFrame;
 
 public class Recommend extends JPanel {
+	private static final long serialVersionUID = 1L;
 	ArrayList<Account> aList = new ArrayList<>();
 	JTextField kwdTextField1 = new JTextField();
 	JTextField kwdTextField2 = new JTextField();

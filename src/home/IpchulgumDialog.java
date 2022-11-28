@@ -9,10 +9,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import recommend.RcmdItemScroll;
-
 public class IpchulgumDialog extends javax.swing.JDialog {
-    void Ipchulgum() {
+	private static final long serialVersionUID = 1L;
+
+	void Ipchulgum() {
         setTitle("상품 상세보기");
         JPanel pane1 = new JPanel(new BorderLayout());
 

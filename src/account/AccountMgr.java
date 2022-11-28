@@ -41,7 +41,7 @@ public class AccountMgr implements DataEngineInterface {
 	@Override // findAll기능 사용
 	public List<Manageable> search(String kwd) {
 		if (kwd == null)
-			return mgr.mList;
+			return Manager.mList;
 		return mgr.findAll(kwd);
 	}
 
@@ -49,7 +49,7 @@ public class AccountMgr implements DataEngineInterface {
 	public void addNewItem(String[] editTexts) {
 		Account s = new Account();
 		s.set(editTexts);
-		mgr.mList.add(s);
+		Manager.mList.add(s);
 	}
 
 	@Override
@@ -61,6 +61,6 @@ public class AccountMgr implements DataEngineInterface {
 	@Override
 	public void remove(String kwd) {
 		Account s = (Account) mgr.find(kwd);
-		mgr.mList.remove(s);
+		Manager.mList.remove(s);
 	}
 }

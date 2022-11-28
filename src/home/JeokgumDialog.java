@@ -10,7 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 public class JeokgumDialog extends javax.swing.JDialog {
-    void Jeokgum() {
+	private static final long serialVersionUID = 1L;
+
+	void Jeokgum() {
         setTitle("상품 상세보기");
         JPanel pane3 = new JPanel(new BorderLayout());
 

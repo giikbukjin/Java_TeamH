@@ -4,11 +4,7 @@ import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
-import facade.DataEngineInterface;
 import mgr.Factory;
 import mgr.Manageable;
 import mgr.Manager;
@@ -47,7 +43,7 @@ public class RcmdItemMgr extends JPanel {
 		//scroll.setBounds(0, 0, 160, 160);
 		//create_form(new JLabel(), 0, 0, 0, 0);
 
-		for (Manageable m : mgr.mList) {
+		for (Manageable m : Manager.mList) {
 			RcmdItem r = (RcmdItem) m;
 			if(recMatch(r)) {
 				RcmdItemModel md = new RcmdItemModel(r);

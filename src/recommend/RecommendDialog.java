@@ -8,6 +8,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 public class RecommendDialog extends javax.swing.JDialog {
+	private static final long serialVersionUID = 1L;
 	public RecommendDialog() {
 	}
 	public void setup() {
