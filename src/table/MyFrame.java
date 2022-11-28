@@ -46,7 +46,7 @@ public class MyFrame extends JFrame {
 
         JLabel lblNewLabel = new JLabel();
         lblNewLabel.setIcon(new ImageIcon(""));
-        lblNewLabel.setBounds(12, 10, 70, 67);
+        lblNewLabel.setBounds(12, 10, 70, 70);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         add(lblNewLabel);
 
