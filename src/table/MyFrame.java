@@ -11,6 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingConstants;
 
+import recommend.Recommend;
+
 public class MyFrame extends JFrame {
     private static final long serialVersionUID = 1L;
 
@@ -41,33 +43,35 @@ public class MyFrame extends JFrame {
         getRootPane().add(panel, BorderLayout.CENTER);
         panel.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("New label");
+        JLabel lblNewLabel = new JLabel("(로고)");
         lblNewLabel.setBounds(12, 10, 70, 67);
-        lblNewLabel.setIcon(new ImageIcon("./img/닭.png"));
+        lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        lblNewLabel.setIcon(new ImageIcon());
         add(lblNewLabel);
 
-        JLabel lblNewLabel_1 = new JLabel("  프로그램 이름");
-        lblNewLabel_1.setBounds(94, 10, 292, 67);
+        JLabel lblNewLabel_1 = new JLabel("  (프로그램 이름)");
+        lblNewLabel_1.setBounds(94, 10, 252, 67);
+        lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_1.setFont(new Font("맑은 고딕", Font.BOLD, 22));
         add(lblNewLabel_1);
 
-        JLabel lblNewLabel_1_1 = new JLabel("안녕하세요, ㅇㅇㅇ님");
+        JLabel lblNewLabel_1_1 = new JLabel("안녕하세요, (사용자 이름)님.");
         lblNewLabel_1_1.setBounds(746, 23, 252, 67);
         lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_1_1.setFont(new Font("맑은 고딕", Font.BOLD, 18));
         add(lblNewLabel_1_1);
 
         JPanel homePanel = new JPanel();
-        tabbedPane.addTab("     홈     ", null, new Home(), null);
+        tabbedPane.addTab("        홈        ", null, new Home(), null);
         homePanel.setLayout(null);
 
         JPanel assetPanel = new JPanel();
-        tabbedPane.addTab("     자산     ", null, newContentPane, null);
+        tabbedPane.addTab("       자산       ", null, newContentPane, null);
         assetPanel.setLayout(null);
 
         JPanel panel_1_1 = new JPanel();
         panel_1_1.setLayout(null);
-        tabbedPane.addTab("     수령액     ", null, panel_1_1, null);
+        tabbedPane.addTab("      수령액      ", null, panel_1_1, null);
 
         JPanel panel_3 = new JPanel();
         tabbedPane.addTab("     상품 추천     ", null, new Recommend(), null);

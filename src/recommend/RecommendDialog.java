@@ -1,12 +1,16 @@
-package table;
+package recommend;
 
 import javax.swing.JPanel;
-import recommend.RcmdItemScroll;
+
+import table.TableSelectionDemo;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 public class RecommendDialog extends javax.swing.JDialog {
-	void setup() {
+	public RecommendDialog() {
+	}
+	public void setup() {
         setTitle("상품상세보기");
         JPanel pane = new JPanel(new BorderLayout());
         JPanel lpane = new JPanel(new BorderLayout());

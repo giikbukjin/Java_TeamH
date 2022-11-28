@@ -20,11 +20,13 @@ public class Home extends JPanel{
 
     void HomeView() {
     	IpchulgumDialog info = new IpchulgumDialog(); //입출금, 적금, 예금에 따라 변경
+    	//or JeokgumDialog info = new JeokgumDialog();
+    	//or YegumDialog info = new YegumDialog();
         setLayout(null);
         
         JLabel lblNewLabel_3 = new JLabel("New label");
         lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.PNG"));
+        lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
         lblNewLabel_3.setBounds(35, 29, 95, 95);
         add(lblNewLabel_3);
        
@@ -37,6 +39,8 @@ public class Home extends JPanel{
         	@Override
     	    public void actionPerformed(ActionEvent e) {
         		info.showIpchulgum(); //입출금, 적금, 예금에 따라 변경
+        		//or info.showJeokgum();
+        		//or info.showYegum();
     	    }
     	});
        

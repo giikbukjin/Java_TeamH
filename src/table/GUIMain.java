@@ -14,11 +14,7 @@ public class GUIMain {
             }
         });
     }
-    /**
-     * Create the GUI and show it.  For thread safety,
-     * this method should be invoked from the
-     * event-dispatching thread.
-     */
+
     private static void createAndShowGUI() {
         //Create and set up the window.
         MyFrame mainFrame = new MyFrame("자산 관리 시스템");
@@ -36,6 +32,4 @@ public class GUIMain {
         mainFrame.setVisible(true);
         //tab.addTab("자산", mainFrame);
     }
-
-
 }
