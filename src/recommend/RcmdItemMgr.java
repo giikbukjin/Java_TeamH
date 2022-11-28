@@ -17,9 +17,9 @@ public class RcmdItemMgr extends JPanel {
 	GridBagLayout Gbag = new GridBagLayout();
 	int count = 1;
 	Recommend rec = new Recommend();
-	String cA = rec.kwd1;
-	String aA = rec.kwd2;
-	static int rcmdNum = 0;
+	String cA = Recommend.kwd1;
+	String aA = Recommend.kwd2;
+	static int rcmdNum = 0; //추천 상품 개수. 텍스트에 집어넣어야 함
 	
 	//currentAsset = kwdTextField1.getText();
 	//ableAsset = kwdTextField2.getText(); 
@@ -51,7 +51,7 @@ public class RcmdItemMgr extends JPanel {
 			RcmdItem r = (RcmdItem) m;
 			if(recMatch(r)) {
 				RcmdItemModel md = new RcmdItemModel(r);
-				//add(md);
+				add(md);
 				this.create_form(md, 0, (count++ * 30), 30, 10);
 				rcmdNum++;
 			}
