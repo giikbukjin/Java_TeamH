@@ -3,8 +3,11 @@ package home;
 import account.Account;
 import mgr.Manageable;
 import mgr.Manager;
+import recommend.RcmdItem;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,69 +15,104 @@ import java.util.ArrayList;
 
 public class Home extends JPanel{
 	private static final long serialVersionUID = 1L;
-	Manager mgr = new Manager();
-    public ArrayList<Manageable> user1List = new ArrayList<>();
-    public ArrayList<Manageable> user2List = new ArrayList<>();
 
     public Home() {
         HomeView();
     }
 
-    void userList(){
-        for(Manageable m: Manager.mList){
-            if(((Account)m).user.equals("user1"))
-                user1List.add(m);
-            if(((Account)m).user.equals("user2"))
-                user2List.add(m);
-        }
-    }
+    int count=1;
     void HomeView() {
-    	IpchulgumDialog info = new IpchulgumDialog(); //입출금, 적금, 예금에 따라 변경
-    	//or JeokgumDialog info = new JeokgumDialog();
-    	//or YegumDialog info = new YegumDialog();
         setLayout(null);
         
-        JLabel lblNewLabel_3 = new JLabel("New label");
-        lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
-        lblNewLabel_3.setBounds(35, 29, 95, 95);
-        add(lblNewLabel_3);
-
-        for(Manageable m: user1List){
-            JButton btnNewButton = new JButton("");
-            btnNewButton.setText(Account.saving + "\t" + ((Account)m).bank + "\t" + ((Account)m).num);
-            btnNewButton.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 18));
-            btnNewButton.setBounds(142, 29, 807, 95);
+        for(Manageable m: Manager.mList){
+        	Account a = (Account)m;
+        	//matchesImage(a);  
+        	
+        	JLabel lblNewLabel_3 = new JLabel();
+            lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+            matchesImage(a,lblNewLabel_3);
+            lblNewLabel_3.setBounds(30, (count * 100) - 70, 95, 95);
+            add(lblNewLabel_3);
+           
+            JButton btnNewButton = new JButton(a.saving + "          " + a.bank + "          " + a.num);
+            btnNewButton.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 17));
+            btnNewButton.setBounds(142, (count * 100) - 60, 807, 70);
+            btnNewButton.setBackground(new Color(243, 246, 250));
+            btnNewButton.setBorder(new LineBorder(new Color(210, 210, 210), 1, true));
             add(btnNewButton);
 
             btnNewButton.addActionListener(new ActionListener() {
-                @Override
+               @Override
                 public void actionPerformed(ActionEvent e) {
-                    info.showIpchulgum(); //입출금, 적금, 예금에 따라 변경
-                    //or info.showJeokgum();
-                    //or info.showYegum();
+                	checkD(a);
                 }
             });
+            count++;
         }
-       
-       /*JLabel lblNewLabel_3_1 = new JLabel("New label");
-       lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
-       lblNewLabel_3_1.setBounds(35, 172, 95, 95);
-       add(lblNewLabel_3_1);
-       
-       JButton btnNewButton_1 = new JButton("신한은행     주거래우대통장     잔고 : 1,500,000");
-       btnNewButton_1.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 18));
-       btnNewButton_1.setBounds(142, 172, 807, 95);
-       add(btnNewButton_1);
-       
-       JLabel lblNewLabel_3_2 = new JLabel("New label");
-       lblNewLabel_3_2.setHorizontalAlignment(SwingConstants.CENTER);
-       lblNewLabel_3_2.setBounds(35, 311, 95, 95);
-       add(lblNewLabel_3_2);
-       
-       JButton btnNewButton_2 = new JButton("신한은행     주거래우대통장     잔고 : 1,500,000");
-       btnNewButton_2.setFont(new Font("맑은 고딕 Semilight", Font.BOLD, 18));
-       btnNewButton_2.setBounds(142, 311, 807, 95);
-       add(btnNewButton_2);*/
+    }
+    
+    void matchesImage(Account a, JLabel lblNewLabel_3) {
+		if ((a.bank).equals("우리종합금융")) {
+			lblNewLabel_3.setIcon(new ImageIcon("./img/woori.png"));          
+		}
+		if ((a.bank).equals("SBI저축은행")) {
+			lblNewLabel_3.setIcon(new ImageIcon("./img/SBI.png"));
+		}
+		if ((a.bank).equals("신한은행")) {
+			lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
+		}
+		if ((a.bank).equals("광주은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/jeonbuk.png"));
+		}
+		if ((a.bank).equals("국민은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/KB.png"));
+		}
+		if ((a.bank).equals("기업은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/IBK.png"));
+		}
+		if ((a.bank).equals("농협은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/NH.png"));
+		}
+		if ((a.bank).equals("부산은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/busan.png"));
+		}
+		if ((a.bank).equals("수협은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/suhyup.png"));
+		}
+		if ((a.bank).equals("웰컴저축은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/welcome.png"));
+		}
+		if ((a.bank).equals("전북은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/jeonbuk.png"));
+		}
+		if ((a.bank).equals("제일은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/SC.png"));
+		}
+		if ((a.bank).equals("제주은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
+		}
+		if ((a.bank).equals("하나은행")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/hana.png"));
+		}
+		if ((a.bank).equals("카카오뱅크")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/kakao.png"));
+		}
+		if ((a.bank).equals("토스뱅크")) {
+            lblNewLabel_3.setIcon(new ImageIcon("./img/toss.png"));
+		}
+	}
+    
+    public void checkD(Account a) {
+    	if ((a.saving).equals("예금")) {
+    		new YegumDialog().showD(a);
+    	}
+    	
+    	if ((a.saving).equals("적금")) {
+    		new JeokgumDialog().showD(a);
+    	}
+    	
+    	if ((a.saving).equals("입출금")) {
+    		new IpchulgumDialog().showD(a);
+    	}
     }
 }

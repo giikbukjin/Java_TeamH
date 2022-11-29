@@ -10,6 +10,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Font;
 
 public class LoginView extends JFrame {
 
@@ -20,12 +22,17 @@ public class LoginView extends JFrame {
     private JPasswordField passText;
     private JTextField userText;
     private boolean bLoginCheck;
+    public static boolean id1;
+    public static boolean pw1;
+    public static boolean id2;
+    public static boolean pw2;
 
     public static void main(String[] args) {
         //new LoginView();
     }
 
     public LoginView() {
+    	setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
         // setting
         setTitle("로그인");
         setSize(280, 150);
@@ -38,7 +45,7 @@ public class LoginView extends JFrame {
         placeLoginPanel(panel);
 
         // add
-        add(panel);
+        getContentPane().add(panel);
 
         // visible
         setVisible(true);
@@ -47,19 +54,21 @@ public class LoginView extends JFrame {
     public void placeLoginPanel(JPanel panel) {
         panel.setLayout(null);
         JLabel userLabel = new JLabel("아이디");
-        userLabel.setBounds(10, 10, 80, 25);
+        userLabel.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 13));
+        userLabel.setBounds(20, 10, 70, 25);
         panel.add(userLabel);
 
         JLabel passLabel = new JLabel("비밀번호");
-        passLabel.setBounds(10, 40, 80, 25);
+        passLabel.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 13));
+        passLabel.setBounds(20, 40, 70, 25);
         panel.add(passLabel);
 
         userText = new JTextField(20);
-        userText.setBounds(100, 10, 160, 25);
+        userText.setBounds(100, 10, 152, 25);
         panel.add(userText);
 
         passText = new JPasswordField(20);
-        passText.setBounds(100, 40, 160, 25);
+        passText.setBounds(100, 40, 152, 25);
         panel.add(passText);
         passText.addActionListener(new ActionListener() {
             @Override
@@ -69,7 +78,9 @@ public class LoginView extends JFrame {
         });
 
         btnInit = new JButton("초기화");
-        btnInit.setBounds(10, 80, 100, 25);
+        btnInit.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 13));
+        btnInit.setBackground(new Color(232, 240, 249));
+        btnInit.setBounds(20, 75, 90, 25);
         panel.add(btnInit);
         btnInit.addActionListener(new ActionListener() {
             @Override
@@ -80,7 +91,9 @@ public class LoginView extends JFrame {
         });
 
         btnLogin = new JButton("로그인");
-        btnLogin.setBounds(160, 80, 100, 25);
+        btnLogin.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 13));
+        btnLogin.setBackground(new Color(232, 240, 249));
+        btnLogin.setBounds(160, 75, 92, 25);
         panel.add(btnLogin);
         btnLogin.addActionListener(new ActionListener() {
             @Override
@@ -91,8 +104,12 @@ public class LoginView extends JFrame {
     }
 
     public void isLoginCheck() {
-        if(userText.getText().equals("user1") && new String(passText.getPassword()).equals("1111")
-                || userText.getText().equals("user2") && new String(passText.getPassword()).equals("2222")) {
+    	id1 = userText.getText().equals("user1");
+    	pw1 = new String(passText.getPassword()).equals("1111");
+    	id2 = userText.getText().equals("user2");
+    	pw2 = new String(passText.getPassword()).equals("2222");
+        if(id1 == true && pw1 == true
+                || id2 == true && pw2 == true) {
             JOptionPane.showMessageDialog(null, "로그인 성공");
             bLoginCheck = true; //판단
 

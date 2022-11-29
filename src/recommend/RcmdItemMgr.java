@@ -17,9 +17,6 @@ public class RcmdItemMgr extends JPanel {
 	String aA = Recommend.kwd2;
 	static int rcmdNum = 0; //추천 상품 개수. 텍스트에 집어넣어야 함
 	
-	//currentAsset = kwdTextField1.getText();
-	//ableAsset = kwdTextField2.getText(); 
-	
 	private static final long serialVersionUID = 1L;
 	
 	public RcmdItemMgr() {
@@ -27,28 +24,20 @@ public class RcmdItemMgr extends JPanel {
 	}
 
 	private Manager mgr = new Manager();
-	/*
-	 * public void readAll(String filename) { mgr.readAll("recommend.txt", new
-	 * Factory() { public Manageable create() { return new RcmdItem(); } }); }
-	 */
 
 	public void view() {
-		mgr.readAll("./txt/recommend.txt", new Factory() {
+		mgr.readAll2("./txt/recommend.txt", new Factory() {
 			public Manageable create() {
 				return new RcmdItem();
 			}
 		});
 		setLayout(Gbag);
-		//JScrollPane scroll = new JScrollPane(this);
-		//scroll.setBounds(0, 0, 160, 160);
-		//create_form(new JLabel(), 0, 0, 0, 0);
 
-		for (Manageable m : Manager.mList) {
+		for (Manageable m : Manager.rList) {
 			RcmdItem r = (RcmdItem) m;
 			if(recMatch(r)) {
 				RcmdItemModel md = new RcmdItemModel(r);
-				add(md);
-				this.create_form(md, 0, (count++ * 30), 30, 10);
+				this.create_form(md, (count++ * 30), 0, 30, 10);
 				rcmdNum++;
 			}
 		}

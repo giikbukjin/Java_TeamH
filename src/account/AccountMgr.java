@@ -31,11 +31,18 @@ public class AccountMgr implements DataEngineInterface {
 
 	@Override
 	public void readAll(String filename) {
-		mgr.readAll("./txt/account.txt", new Factory() {
-			public Manageable create() {
-				return new Account();
-			}
-		});
+		if(filename=="./txt/account1.txt") {
+			mgr.readAll("./txt/account1.txt", new Factory() {
+				public Manageable create() {
+					return new Account();
+				}
+			});}
+		if(filename=="./txt/account2.txt") {
+			mgr.readAll("./txt/account2.txt", new Factory() {
+				public Manageable create() {
+					return new Account();
+				}
+			});}
 	}
 
 	@Override // findAll기능 사용

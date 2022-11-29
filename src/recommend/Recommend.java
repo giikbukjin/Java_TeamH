@@ -3,9 +3,13 @@ package recommend;
 import javax.swing.JPanel;
 
 import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
+
 import account.Account;
 import table.TableSelectionDemo;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -69,25 +73,29 @@ public class Recommend extends JPanel {
 		TableSelectionDemo tableDemo = new TableSelectionDemo();
 		setLayout(null);
 		JLabel userLabel = new JLabel("보유현금");
-		userLabel.setBounds(80, 190, 80, 25);
+		userLabel.setFont(new Font("엘리스 디지털배움체", Font.BOLD, 15));
+		userLabel.setBounds(100, 190, 80, 25);
 		add(userLabel);
 
 		JLabel passLabel = new JLabel("저축가능액");
-		passLabel.setBounds(70, 240, 80, 25);
+		passLabel.setFont(new Font("엘리스 디지털배움체", Font.BOLD, 15));
+		passLabel.setBounds(90, 240, 80, 25);
 		add(passLabel);
 		kwdTextField1.setText(null);
 		kwdTextField2.setText(null);
-		kwdTextField1.setBounds(160, 180, 240, 40);
-		kwdTextField2.setBounds(160, 230, 240, 40);
+		kwdTextField1.setBounds(180, 180, 240, 40);
+		kwdTextField1.setBorder(new LineBorder(new Color(210, 210, 210), 1, true));
+		kwdTextField2.setBounds(180, 230, 240, 40);
+		kwdTextField2.setBorder(new LineBorder(new Color(210, 210, 210), 1, true));
 		add(kwdTextField1);
 		add(kwdTextField2);
-		JButton recommend = new JButton("상품 추천");
-		recommend.setBounds(430, 190, 90, 70);
-		add(recommend);
-		//JFrame jf = new JFrame();
-		//JDialog rd = new RcmdItemDialog(jf, "rec");
 		
-		//run();
+		JButton recommend = new JButton("상품 추천");
+		recommend.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 15));
+		recommend.setBorder(new LineBorder(new Color(210, 210, 210), 1, true));
+		recommend.setBackground(new Color(232, 240, 249));
+		recommend.setBounds(450, 190, 100, 70);
+		add(recommend);
 
 		recommend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -96,9 +104,6 @@ public class Recommend extends JPanel {
 					kwd2 = kwdTextField2.getText();
 					tableDemo.showRecommend();
 				}
-				/*if (e.getActionCommand().equals("상품 추천")) {
-					rim.view();
-				}*/
 			}
 		});
 	}

@@ -21,30 +21,28 @@ public class RcmdItemModel extends JPanel {
 	}
 
 	public void createModel(RcmdItem ri) {
-		JPanel panel_1 = new JPanel();
 		setPreferredSize(new Dimension(376, 350)); // 대화상자 크기 설정
 		
-		panel_1.setBackground(new Color(244, 244, 244));
-		panel_1.setBounds(22, 60, 376, 350);
-		panel_1.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		panel_1.setLayout(null);
+		setBackground(new Color(244, 244, 244));
+		setBounds(22, 60, 376, 350);
+		setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel(); //로고
-		lblNewLabel.setText("(로고)");
 		matchImage(ri, lblNewLabel);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(25, 25, 95, 95);
-		panel_1.add(lblNewLabel);
+		add(lblNewLabel);
 		
 		JPanel panel_2_2_1 = new JPanel(); 
 		panel_2_2_1.setBounds(120, 55, 62, 30);
-		panel_1.add(panel_2_2_1);
+		add(panel_2_2_1);
 		panel_2_2_1.setBackground(new Color(255, 255, 255));
 		panel_2_2_1.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel(ri.saving); //금융권
 		lblNewLabel_1.setBackground(new Color(255, 255, 255));
-		lblNewLabel_1.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_1.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2_2_1.add(lblNewLabel_1);
 		
@@ -52,31 +50,31 @@ public class RcmdItemModel extends JPanel {
 		panel_2_2.setBounds(120, 90, 62, 30);
 		panel_2_2.setBackground(new Color(255, 255, 255));
 		panel_2_2.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_2_2);
+		add(panel_2_2);
 		
 		JLabel lblNewLabel_2 = new JLabel(ri.fc); //상품종류
-		lblNewLabel_2.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_2.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_2_2.add(lblNewLabel_2);
 		
 		JPanel panel_2_1 = new JPanel(); //인덱스
 		panel_2_1.setBounds(182, 55, 19, 30);
-		panel_1.add(panel_2_1);
+		add(panel_2_1);
 		panel_2_1.setBackground(new Color(191, 230, 253));
 		
 		JPanel panel_2 = new JPanel(); //인덱스
 		panel_2.setBounds(182, 90, 19, 30);
-		panel_1.add(panel_2);
+		add(panel_2);
 		panel_2.setBackground(new Color(173, 251, 132));
 		
 		JPanel panel_4 = new JPanel();
 		panel_4.setBounds(25, 152, 157, 49);
 		panel_4.setBackground(new Color(255, 255, 255));
 		panel_4.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_4);
+		add(panel_4);
 		
 		JLabel lblNewLabel_4 = new JLabel(ri.bank); //은행이름
-		lblNewLabel_4.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_4.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_4.add(lblNewLabel_4, BorderLayout.CENTER);
 		
@@ -84,49 +82,52 @@ public class RcmdItemModel extends JPanel {
 		panel_4_1.setBounds(25, 211, 157, 49);
 		panel_4_1.setBackground(Color.WHITE);
 		panel_4_1.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_4_1);
+		add(panel_4_1);
 		
 		JLabel lblNewLabel_4_1 = new JLabel("" + ri.rate + "%"); //이율
 		lblNewLabel_4_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4_1.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_4_1.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		panel_4_1.add(lblNewLabel_4_1, BorderLayout.CENTER);
 		
 		JPanel panel_4_2 = new JPanel();
 		panel_4_2.setBounds(25, 270, 157, 49);
 		panel_4_2.setBackground(Color.WHITE);
 		panel_4_2.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_4_2);
+		add(panel_4_2);
 		
 		JLabel lblNewLabel_4_2_3 = new JLabel("" + ri.limit + "원"); //한도금액
 		lblNewLabel_4_2_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4_2_3.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_4_2_3.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		panel_4_2.add(lblNewLabel_4_2_3, BorderLayout.CENTER);
 		
 		JPanel panel_4_3 = new JPanel();
 		panel_4_3.setBounds(194, 152, 157, 49);
 		panel_4_3.setBackground(Color.WHITE);
 		panel_4_3.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_4_3);
+		add(panel_4_3);
 		
 		JLabel lblNewLabel_4_2 = new JLabel(ri.ItemName); //상품이름
 		lblNewLabel_4_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4_2.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_4_2.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		panel_4_3.add(lblNewLabel_4_2, BorderLayout.CENTER);
 		
 		JPanel panel_4_4 = new JPanel();
 		panel_4_4.setBounds(194, 211, 157, 49);
 		panel_4_4.setBackground(Color.WHITE);
 		panel_4_4.setLayout(new BorderLayout(0, 0));
-		panel_1.add(panel_4_4);
+		add(panel_4_4);
 		
 		JLabel lblNewLabel_4_2_1 = new JLabel("" + ri.month + "개월"); //개월수
 		lblNewLabel_4_2_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4_2_1.setFont(new Font("맑은 고딕 Semilight", Font.PLAIN, 12));
+		lblNewLabel_4_2_1.setFont(new Font("엘리스 디지털배움체", Font.PLAIN, 12));
 		panel_4_4.add(lblNewLabel_4_2_1, BorderLayout.CENTER);
 		
 		JButton btnNewButton = new JButton("상품 선택");
+		btnNewButton.setBackground(new Color(232, 240, 249));
 		btnNewButton.setBounds(225, 284, 95, 23);
-		panel_1.add(btnNewButton);
+		add(btnNewButton);
+		
+		//add(panel_1);
 	}
 
 	public void matchImage(RcmdItem ri, JLabel a) {

@@ -16,7 +16,7 @@ public class MainProcess {
 
     // 메인프레임 창
     public void showFrameTest() {
-        MyMain.main(null);
         loginView.setVisible(false);
+        MyMain.main(null);
     }
 }

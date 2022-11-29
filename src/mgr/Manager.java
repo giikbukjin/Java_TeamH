@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class Manager {
 	static public Scanner scan = new Scanner(System.in);
 	static public ArrayList<Manageable> mList = new ArrayList<>();
-
+	static public ArrayList<Manageable> rList = new ArrayList<>();
+	
 	public void readAll(String filename, Factory fac) { // 파일 읽어오는 함수
 		Scanner filein = null;
 		try {
@@ -22,6 +23,22 @@ public class Manager {
 			Manageable m = fac.create();
 			m.read(filein);
 			mList.add(m);
+		}
+		filein.close();
+	}
+	
+	public void readAll2(String filename, Factory fac) { // 파일 읽어오는 함수
+		Scanner filein = null;
+		try {
+			filein = new Scanner(new File(filename));
+		} catch (FileNotFoundException e) {
+			System.out.println(e);
+			System.exit(0);
+		}
+		while (filein.hasNext()) {
+			Manageable m = fac.create();
+			m.read(filein);
+			rList.add(m);
 		}
 		filein.close();
 	}
