@@ -15,6 +15,8 @@ import mgr.Manageable;
 import mgr.Manager;
 
 public class IpchulgumDialog extends javax.swing.JDialog {
+	public IpchulgumDialog() {
+	}
 	private static final long serialVersionUID = 1L;
 
 	void Ipchulgum(Account a) {
@@ -79,7 +81,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			 lblNewLabel_3_3.setIcon(new ImageIcon("./img/shinhan.PNG"));
 			 lblNewLabel_3_3.setHorizontalAlignment(SwingConstants.CENTER);
 			 lblNewLabel_3_3.setBounds(25, 25, 95, 95);
-			 add(lblNewLabel_3_3);
+			 getContentPane().add(lblNewLabel_3_3);
 		 }
 		 
 		if ((a.bank).equals("하나은행")) {
@@ -87,7 +89,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3_3.setIcon(new ImageIcon("./img/hana.PNG"));
 			lblNewLabel_3_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3_3.setBounds(25, 25, 95, 95);
-			add(lblNewLabel_3_3);
+			getContentPane().add(lblNewLabel_3_3);
 		}
 		 
 		if ((a.bank).equals("우리종합금융")) {
@@ -95,14 +97,14 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 	            lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 	            lblNewLabel_3.setIcon(new ImageIcon("./img/woori.png"));
 	            lblNewLabel_3.setBounds(25,25, 95, 95);
-	            add(lblNewLabel_3);
+	            getContentPane().add(lblNewLabel_3);
 			}
 		if ((a.bank).equals("SBI저축은행")) {
 				JLabel lblNewLabel_3 = new JLabel();
 	            lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 	            lblNewLabel_3.setIcon(new ImageIcon("./img/SBI.png"));
 	            lblNewLabel_3.setBounds(25,25, 95, 95);
-	            add(lblNewLabel_3);
+	            getContentPane().add(lblNewLabel_3);
 		}
 		
 		if ((a.bank).equals("토스뱅크")) {
@@ -110,7 +112,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
             lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
             lblNewLabel_3.setIcon(new ImageIcon("./img/toss.png"));
             lblNewLabel_3.setBounds(25,25, 95, 95);
-            add(lblNewLabel_3);
+            getContentPane().add(lblNewLabel_3);
 		}
 		
 		if ((a.bank).equals("카카오뱅크")) {
@@ -118,7 +120,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
             lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
             lblNewLabel_3.setIcon(new ImageIcon("./img/kakao.png"));
             lblNewLabel_3.setBounds(25,25, 95, 95);
-            add(lblNewLabel_3);
+            getContentPane().add(lblNewLabel_3);
 		}
 		
 		if ((a.bank).equals("광주은행")) {
@@ -126,14 +128,14 @@ public class IpchulgumDialog extends javax.swing.JDialog {
             lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
             lblNewLabel_3.setIcon(new ImageIcon("./img/jeonbuk.png"));
             lblNewLabel_3.setBounds(25,25, 95, 95);
-            add(lblNewLabel_3);
+            getContentPane().add(lblNewLabel_3);
 		}
 		if ((a.bank).equals("국민은행")) {
 			JLabel lblNewLabel_3 = new JLabel();
             lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
             lblNewLabel_3.setIcon(new ImageIcon("./img/KB.png"));
             lblNewLabel_3.setBounds(25,25, 95, 95);
-            add(lblNewLabel_3);
+            getContentPane().add(lblNewLabel_3);
 		}
 	
 		if ((a.bank).equals("기업은행")) {
@@ -141,7 +143,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/IBK.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 	
 		if ((a.bank).equals("농협은행")) {
@@ -149,7 +151,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/NH.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 	
 		if ((a.bank).equals("부산은행")) {
@@ -157,7 +159,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/busan.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 	
 		if ((a.bank).equals("수협은행")) {
@@ -165,7 +167,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/suhyup.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 	
 		if ((a.bank).equals("웰컴저축은행")) {
@@ -173,14 +175,14 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/welcome.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 		if ((a.bank).equals("전북은행")) {
 			JLabel lblNewLabel_3 = new JLabel();
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/jeonbuk.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 
 		if ((a.bank).equals("제일은행")) {
@@ -188,7 +190,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
 			lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 			lblNewLabel_3.setIcon(new ImageIcon("./img/SC.png"));
 			lblNewLabel_3.setBounds(25,25, 95, 95);
-			add(lblNewLabel_3);
+			getContentPane().add(lblNewLabel_3);
 		}
 
 		if ((a.bank).equals("제주은행")) {
@@ -196,7 +198,7 @@ public class IpchulgumDialog extends javax.swing.JDialog {
     		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
     		lblNewLabel_3.setIcon(new ImageIcon("./img/shinhan.png"));
     		lblNewLabel_3.setBounds(25,25, 95, 95);
-    		add(lblNewLabel_3);
+    		getContentPane().add(lblNewLabel_3);
 		}
     }
 }
