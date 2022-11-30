@@ -54,14 +54,14 @@ public class MyFrame extends JFrame {
         panel.setLayout(null);
 
         JLabel lblNewLabel = new JLabel();
-        lblNewLabel.setIcon(new ImageIcon("./img/tempLogo.png"));
+        lblNewLabel.setIcon(new ImageIcon("./img/LOGO.png"));
         lblNewLabel.setBounds(30, 10, 70, 70);
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         getContentPane().add(lblNewLabel);
 
-        JLabel lblNewLabel_1 = new JLabel("  (프로그램 이름)");
+        JLabel lblNewLabel_1 = new JLabel("  뱅크 하이웨이    BANK HIGHWAY");
         lblNewLabel_1.setForeground(new Color(255, 255, 255));
-        lblNewLabel_1.setBounds(111, 10, 235, 67);
+        lblNewLabel_1.setBounds(100, 10, 350, 67);
         lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel_1.setFont(new Font("엘리스 디지털배움체", Font.BOLD, 22));
         getContentPane().add(lblNewLabel_1);
