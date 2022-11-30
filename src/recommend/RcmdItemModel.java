@@ -128,6 +128,7 @@ public class RcmdItemModel extends JPanel {
 		panel_4_4.add(lblNewLabel_4_2_1, BorderLayout.CENTER);
 		
 		JButton btnNewButton = new JButton("상품 선택");
+		btnNewButton.setBackground(new Color(232, 240, 249));
 		btnNewButton.setBounds(225, 284, 95, 23);
 		add(btnNewButton);
 		
